@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/bid.css" />
+    <title>Clickfast</title>
+</head>
+
+<body>
+    <div class="header-bar">
+        <div class="header">
+            <h1 class="title">
+                <a href="/index.html">Clickfast</a>
+            </h1>
+            <form>
+                <i class="fa-solid fa-magnifying-glass"></i><input type="search" class="search-bar"
+                    placeholder="Search for item name">
+            </form>
+            <div class="header-button">
+                <div class="help-button">
+                    <a href="/helpCenter.html">Help</a>
+                </div>
+                <div class="login-button">
+                    <a href="/new-login.html">Login</a>
+                </div>
+                <div class="login-div">
+                    <div id="sign-up">SIGN UP</div>
+                </div>
+            </div>
+            <div id="logout">
+                <!-- <i class="fa-solid fa-power-off"></i> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="infobar">
+    </div>
+    <div class="main-container">
+        <div class="product-column">
+            <div class="product-photo">
+                <img src="./photos/ps5.jpg">
+            </div>
+        </div>
+        
+
+        <div class="main-function">
+            <div id="offset">
+                Highest Bid: HK$1,200 | Lowest Ask: HK$1,320
+                <br>
+                <i class="fa-solid fa-bell"></i> ONLY 3 LEFT in this condition!
+            </div>
+            <hr>
+            <form id="bid-column">
+                <select class="dropDown" name="condition" required>
+                    <option value="">Condition</option>
+                    <option value="100">Brand New</option>
+                    <option value="90">Like New</option>
+                    <option value="80">Used</option>
+                </select>
+                <div class="moneyinput">
+                    <label for="bid-price">$</label>
+                    <input type="number" id="bid-price" name="bidprice" required min="0">
+                </div>
+                <div class="column">
+                    <div id="cancel">CANCEL</div>
+                    <!-- <div>HELLO</div> -->
+                    <input type="submit" id="submit" value="SUBMIT >">
+                </div>
+            </form>
+            <div id="is-login">
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/d9e0377e68.js" crossorigin="anonymous"></script>
+    <script src="./js/bid.js"></script>
+</body>
+
+</html>

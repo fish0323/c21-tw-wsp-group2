@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Clickfast</title>
+</head>
+
+<body>
+    <div class="header-bar">
+        <div class="header">
+            <h1 class="title">
+                <a href="/index.html">Clickfast</a>
+            </h1>
+            <form>
+                <i class="fa-solid fa-magnifying-glass"></i><input type="search" class="search-bar"
+                    placeholder="Search for item name">
+            </form>
+            <div class="header-button">
+                <div class="help-button">
+                    <a href="/helpCenter.html">Help</a>
+                </div>
+                <div class="login-button">
+                    <a href="/new-login.html">Login</a>
+                </div>
+                <div class="login-div">
+                    <div id="sign-up">SIGN UP</div>
+                </div>
+            </div>
+            <div id="logout">
+                <!-- <i class="fa-solid fa-power-off"></i> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="banner">
+            <img src="./photos/PlayStation-Logo-2021.jpg">
+        </div>
+        <div class="product-container">
+            <div class="navigation">
+                <h2>Categories</h2>
+                <hr>
+                <h4>Select Console</h4>
+                <div>
+                    <input type="checkbox" class="all" name="all1" id="all1" checked>
+                    <label for="all1">All</label>
+                    <form>
+                        <input type="checkbox" id="ps5" name="ps5">
+                        <label for="ps5">PlayStation 5</label>
+                    </form>
+                    <form>
+                        <input type="checkbox" id="ps4" name="ps4">
+                        <label for="ps4">PlayStation 4</label>
+                    </form>
+                    <form>
+                        <input type="checkbox" id="xbox" name="xbox">
+                        <label for="xbox">Xbox Series X</label>
+                    </form>
+                    <form>
+                        <input type="checkbox" id="nswitch" name="nswitch">
+                        <label for="nswitch">Switch</label>
+                    </form>
+                </div>
+                <hr>
+                <h4>Product Type</h4>
+                <div>
+                    <input type="checkbox" class="all" name="all2" id="all2" checked>
+                    <label for="all2">All</label>
+                    <form>
+                        <input type="checkbox" id="gameconsole" name="gameconsole">
+                        <label for="gameconsole">Game Console</label>
+                    </form>
+                    <form>
+                        <input type="checkbox" id="videogames" name="videogames">
+                        <label for="videogames">Video Games</label>
+                    </form>
+                </div>
+                <hr>
+                <h4>Price</h4>
+                <div>
+                    <input type="checkbox" class="all" name="all3" id="all3" checked>
+                    <label for="all3">All</label>
+                    <form>
+                        <input type="checkbox" id="low" name="low">
+                        <label for="low">$ 0 - $299</label>
+                    </form>
+                    <form>
+                        <input type="checkbox" id="secondlow" name="secondlow">
+                        <label for="secondlow">$300 - $599</label>
+                    </form>
+                    <form>
+                        <input type="checkbox" id="normal" name="normal">
+                        <label for="normal">$600 - $2999</label>
+                    </form>
+                    <form>
+                        <input type="checkbox" id="high" name="high">
+                        <label for="high">$3000 or above</label>
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="product-column">
+                <div class="navigation-bar">
+                </div>
+                <div class="product-list" action="/products" method="GET">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="footer-container">
+            <div id="slogan">Clickfast. Enjoy Fast.</div>
+            <div id="footer-bar">
+                <div>HELP | HOW IT WORKS | PRIVACY | TERMS | JOBS | CONTACT | PRODUCT SUGGESTION | PRESS | COOKIE
+                    SETTINGS</div>
+                <div id="right-reserved">@2022 Clickfast. All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/d9e0377e68.js" crossorigin="anonymous"></script>
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

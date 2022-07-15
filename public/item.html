@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/item.css">
+    <title>Clickfast</title>
+</head>
+
+<body>
+    <div class="header-bar">
+        <div class="header">
+            <h1 class="title">
+                <a href="/index.html">Clickfast</a>
+            </h1>
+            <form>
+                <i class="fa-solid fa-magnifying-glass"></i><input type="search" class="search-bar"
+                    placeholder="Search for item name">
+            </form>
+            <div class="header-button">
+                <div class="help-button">
+                    <a href="/helpCenter.html">Help</a>
+                </div>
+                <div class="login-button">
+                    <a href="/new-login.html">Login</a>
+                </div>
+                <div class="login-div">
+                    <div id="sign-up">SIGN UP</div>
+                </div>
+            </div>
+            <div id="logout">
+                <!-- <i class="fa-solid fa-power-off"></i> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="navigation-bar">
+            <div>
+                Home / Game Console / SONY
+            </div>
+        </div>
+        <div class="name-and-button">
+            <div class="product-name" action="/name" method="POST">
+                <!-- NAME -->
+            </div>
+            <div class="like-and-share-button">
+                <div class="like-button"><i class="fa-solid fa-thumbs-up"></i></div>
+                <div class="share-button"><i class="fa-solid fa-share-nodes"></i></div>
+                <!-- <div class="like-button">LIKE</div>
+                <div class="share-button">SHARE</div> -->
+            </div>
+        </div>
+
+        <div class="product-column">
+            <div class="product-photo" action="/item" method="GET">
+                <!-- PHOTO -->
+            </div>
+            <div class="main-function-position">
+                <div class="main-function">
+                    <div class="hint">Select Condition and Trade Location</div>
+                    <div class="condition-and-location">
+                        <div id="depreciation-rate">
+                            <select class="dropDown" id="condition">
+                                <option value="Brand New">Brand New</option>
+                                <option value="Like New">Like New</option>
+                                <option value="Used">Used</option>
+                            </select>
+                        </div>
+                        <div id="select-location">
+                            <select class="dropDown" id="location">
+                                <option value="ALL">ALL</option>
+                                <option value="HK ISLAND">HK ISLAND</option>
+                                <option value="KLN">KLN</option>
+                                <option value="N.T.">N.T.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="hint">Place the bid or directly buy at the lowest price.</div>
+                    <div class="bid-and-buy-button">
+                        <div id="bid-button">Place Bid</div>
+                        <div id="buy-button">Buy for HK$ XXXX</div>
+                    </div>
+                    <hr>
+                    <div class="hint">Sell at the price you want.</div>
+                    <div class="sell-now">Sell for HK$ XXXX or Above</div>
+                </div>
+            </div>
+        </div>
+        <div class="transaction-information">
+            <div class="recent-transaction">
+                <h3>Recent Transaction</h3>
+                <table class="recent-bar">
+                    <tr>
+                        <th>Date</th>
+                        <th>Condition</th>
+                        <th>Price</th>
+                        <th>Shipped / Delivery In Person</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="bids-information">
+                <div class="bids">
+                    <h3>Want to buy</h3>
+                    <table class="bids-bar">
+                        <tr>
+                            <th>Condition</th>
+                            <th>Price</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="asks-information">
+                <div class="asks">
+                    <h3>Want to sell</h3>
+                    <table class="asks-bar">
+                        <tr>
+                            <th>Condition</th>
+                            <th>Price</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="product-details">
+            <h3>Product Details</h3>
+            <hr>
+            <div class="details">
+            </div>
+        </div>
+        <div class="price-history">
+            <h3>Price History</h3>
+            <img src="./photos/linechartps5.png">
+        </div>
+
+    </div>
+    <div class="footer">
+        <div id="footer-container">
+            <div id="slogan">Clickfast. Enjoy Fast.</div>
+            <div id="footer-bar">
+                <div>HELP | HOW IT WORKS | PRIVACY | TERMS | JOBS | CONTACT | PRODUCT SUGGESTION | PRESS | COOKIE
+                    SETTINGS</div>
+                <div id="right-reserved">@2022 Clickfast. All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/d9e0377e68.js" crossorigin="anonymous"></script>
+    <script src="./js/item.js"></script>
+</body>
+
+</html>

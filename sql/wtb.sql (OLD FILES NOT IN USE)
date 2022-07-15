@@ -1,0 +1,21 @@
+SELECT * FROM wtb ORDER BY input_price_buy ASC;
+
+-- the lowest price bid
+-- SELECT * FROM wtb ORDER BY input_price_buy ASC LIMIT 1;
+
+-- the highest price bid
+SELECT * FROM wtb ORDER BY input_price_buy DESC LIMIT 1;
+
+-- Select all bidRecord (distinct product_id & users_id)
+SELECT * FROM wtb WHERE EXISTS(SELECT DISTINCT products_id, users_id FROM wtb);
+
+SELECT DISTINCT products_id, users_id FROM wtb;
+
+-- SELECT DISTINCT products_id, users_id FROM wtb RETURN id;
+
+
+SELECT users_id, MAX(id) FROM wtb GROUP BY users_id;
+
+SELECT users_id, input_price_buy, MAX(id) FROM wtb GROUP BY users_id, input_price_buy;
+
+SELECT M.users_id, M.input_price_buy FROM (SELECT users_id, MAX(Inserted) AS First FROM wtb GROUP BY users_id) foo JOIN wtb M ON foo.users_id = M.users_id AND foo.First = M.Inserted;
