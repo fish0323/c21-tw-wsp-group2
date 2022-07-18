@@ -1,3 +1,5 @@
+\c wsp_group2
+
 insert into users (password, name, email, created_at)
 values (
         '1111',

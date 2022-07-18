@@ -1,3 +1,5 @@
+\c wsp_group2
+
 insert into wtb (
         users_id,
         upload_date,

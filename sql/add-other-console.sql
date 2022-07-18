@@ -1,3 +1,5 @@
+\c wsp_group2
+
 insert into wts (users_id, upload_date, input_price_sell, depreciation_rate, location, is_active, products_id) values (20, '2022-03-16 22:40:36', 2682, 'Brand New', 'N.T.', true, 4);
 insert into wts (users_id, upload_date, input_price_sell, depreciation_rate, location, is_active, products_id) values (2, '2021-12-09 08:22:01', 3750, 'Brand New', 'KLN', true, 4);
 insert into wts (users_id, upload_date, input_price_sell, depreciation_rate, location, is_active, products_id) values (4, '2022-06-04 08:36:25', 2728, 'Brand New', 'HK ISLAND', true, 4);

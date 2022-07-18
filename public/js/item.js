@@ -1,8 +1,9 @@
+console.log(location.origin)
 window.onload = () => {
   getProduct(); // 13-22
   getBrandNewWtbList(); // 25-64
   getBrandNewWtsList(); // 67-114
-  selectConditionWTB(); // 117-162
+  // selectConditionWTB(); // 117-162
   selectConditionWTS(); // 165-216
   getCurrentUser(); // 219-250
   selectLocationWTS();
@@ -121,8 +122,11 @@ async function getBrandNewWtsList() {
 function selectConditionWTB() {
   let condDropDown = document.querySelector("#condition");
   let condition = "Brand New";
+  let location = "";
   condDropDown.addEventListener("change", async () => {
     condition = condDropDown.value;
+      console.log("check test", condition,location);
+
     const resp = await fetch(`/wtblist?id=${id}&condition=${condition}`);
     const product = await resp.json();
 
@@ -231,9 +235,10 @@ function selectConditionWTS() {
   // console.log(location)
   condDropDown.addEventListener("change", async () => {
     condition = condDropDown.value;
-    // location = document.querySelector("#location").value;
-    const resp = await fetch(`/wtslist?id=${id}&condition=${condition}`);
-    // const resp = await fetch(`/wtslist?id=${id}&location=${location}&condition=${condition}`);
+    let geo_location = document.querySelector("#location").value;
+    // const resp = await fetch(`/wtslist?id=${id}&condition=${condition}`);
+    console.log("check test", condition,geo_location);
+    const resp = await fetch(`/wtslist?id=${id}&location=${geo_location}&condition=${condition}`);
     const product = await resp.json();
 
     if (product.length < 5) {

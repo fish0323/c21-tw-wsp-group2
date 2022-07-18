@@ -1,3 +1,8 @@
+--  create db
+-- change to db
+
+\c wsp_group2
+
 CREATE TABLE "users"(
     "id" SERIAL primary key,
     "password" VARCHAR(255) NOT NULL,
@@ -26,7 +31,6 @@ CREATE TABLE "wts"(
     FOREIGN KEY (users_id) REFERENCES users(id) on delete cascade on update cascade,
     FOREIGN KEY (products_id) REFERENCES products(id)
 );
-
 CREATE TABLE "wtb"(
     id SERIAL primary key,
     users_id INTEGER NOT NULL,

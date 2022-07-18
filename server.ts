@@ -36,20 +36,23 @@ app.use(itemRoutes);
 
 // app.use(bidRoutes);
 
-app.use("/bid.html", isLoggedin, bidRoutes);
+app.use("/bid.html", isLoggedin);
 app.use("/sell.html", isLoggedin, sellRoutes);
-app.use("/transaction.html", isLoggedin);
+app.use("/transaction.html" ,isLoggedin);
+
+
+app.use("/bid",isLoggedin,bidRoutes)
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(
-  expressSession({
-    secret: "XXXXXXXX",
-    resave: true,
-    saveUninitialized: true,
-  })
-);
+// app.use(
+//   expressSession({
+//     secret: "XXXXXXXX",
+//     resave: true,
+//     saveUninitialized: true,
+//   })
+// );
 
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 // app.use("/userprofile", isLoggedin, express.static("private"));
 
 app.use((req, res) => {
@@ -58,5 +61,5 @@ app.use((req, res) => {
 
 const PORT = 8080;
 app.listen(PORT, () => {
-  console.log(`listening to PORT: ${PORT}`);
+  console.log(`Server listening on http://localhost:${PORT}`);
 });

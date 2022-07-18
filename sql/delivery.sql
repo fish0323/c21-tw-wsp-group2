@@ -1,3 +1,5 @@
+\c wsp_group2
+
 create table delivery (
 	date VARCHAR(255),
 	condition VARCHAR(9),

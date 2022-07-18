@@ -52,13 +52,16 @@ itemRoutes.get('/wtslist', async (req, res) => {
   }
   let location;
   if (req.query.location){
+     console.log("i'm here")
     if (req.query.location == "ALL"){
       location = ""
     } else {
       location = "AND location = '" + req.query.location + "' "
+
     }
   } else {
     location = ""
+    console.log("i'm hit")
   }
   // get the id from wts list which filter the duplicate and get the latest record (id) from every users.
   const ids = (await client.query(/*sql*/`SELECT users_id, MAX(id) FROM wts WHERE products_id = ${productId} AND is_active = false AND depreciation_rate = ` + "'" + condition + "' GROUP BY users_id")).rows;

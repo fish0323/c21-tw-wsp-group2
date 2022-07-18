@@ -1,3 +1,5 @@
+\c wsp_group2
+
 INSERT INTO products(
         name,
         type,

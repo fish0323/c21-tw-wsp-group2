@@ -1,3 +1,4 @@
+let users;
 window.onload = async () => {
   const users = await getCurrentUser();
   console.log("2", users);

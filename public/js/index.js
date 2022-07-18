@@ -91,7 +91,7 @@ function arrayRemove(arr, value) {
 
 // sorting video game data (/sort)
 let checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.all)');
-let formObject = { arr: [] };
+let formObject = {}
 
 let all1 = document.querySelector("#all1")
 let ps5 = document.querySelector("#ps5")
@@ -104,8 +104,14 @@ let low = document.querySelector("#low")
 let secondlow = document.querySelector("#secondlow")
 let normal = document.querySelector("#normal")
 let high = document.querySelector("#high")
-let arr = formObject['arr']
+let arr = []
 
+console.log("hihihihihihi",arr == formObject['arr'])
+
+// let test = {name: "John"};
+// console.log("check cehck har ", typeof test)
+// console.log("type of arr",typeof(formObject['arr']))
+// let arr 
 // if (all1.checked == true) {
 //   ps5.checked = false
 //   ps4.checked = false
@@ -115,14 +121,18 @@ let arr = formObject['arr']
 
 for (let i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("change", async (e) => {
+    console.log("clicked")
     e.preventDefault();
     if (e.target.checked) {
-      // console.log(e.target.name, "checked")
-      formObject["arr"].push(e.target.name);
+
+      console.log(e.target.name, "checked")
+      arr.push(e.target.name);
+      console.log(arr,"inspect1",arr)
       e.target.closest("div").querySelector(".all").checked = false;
     } else {
       // console.log(e.target.name, "unchecked")
-      formObject["arr"] = arrayRemove(formObject["arr"], e.target.name);
+      arr = arrayRemove(arr, e.target.name);
+      console.log(arr,"inspect 2", arr)
       // delete formObject[e.target.name];
     }
     
@@ -173,6 +183,8 @@ for (let i = 0; i < checkboxes.length; i++) {
     if ( low.checked == false && secondlow.checked == false && normal.checked == false && high.checked == false ) {
       document.querySelector("#all3").checked = true;
     }
+
+    formObject["arr"] = arr;
 
     console.log(arr);
     console.log(formObject["arr"]);
